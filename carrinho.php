@@ -12,7 +12,7 @@ if (!isset($_SESSION['carrinho'])) {
 }
 
 if ($_POST) {
-    if(isset($_POST['action'])) { //ver se está pedindo uma ação interna
+    if(isset($_POST['action'])) { //ve se está pedindo uma ação interna
         /* ----------------------------------------- REMOVER CARRINHO ----------------------------------------- */
         if ($_POST['action'] === 'removeItem' && isset($_POST['produto_id'])) {
             $produtoId = $_POST['produto_id'];
@@ -91,36 +91,9 @@ foreach ($_SESSION['carrinho'] as $produto) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho - Daundoys</title>
-    <link rel="stylesheet" href="css/style-carrinho.css">
-    <link rel="icon" href="https://images.vexels.com/media/users/3/286649/isolated/preview/31bd1b279101d861b2be48dc66d46d52-a-cone-de-chapa-u-de-duende-de-sa-o-patra-cio.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Carrinho</title>
 </head>
 <body>
-    <?php
-    // if(isset($cod)){
-    //     if (isset($_SESSION['payInfo'])){
-    //         echo '<div class="infoRequiredContainer">';
-    //             echo '<div class="infoRequiredModal">';
-    //                 echo '<form action="controller/carrinhoController.php" method="post">';
-    //                     echo '<section class="inputInfoRequiredInputContainer">';
-    //                         echo '<label for="dadoBancario">Dados bancários</label>';
-    //                         echo '<input type="text" name="dadoBancario" id="dadoBancario" placeholder="Insira seus dados bancários">';
-    //                     echo '</section>';
-    //                     echo '<section class="inputInfoRequiredInputContainer">';
-    //                         echo '<label for="endereco_destinado">Endereço de destino</label>';
-    //                         echo '<input type="text" name="endereco_destinado" id="endereco_destinado" placeholder="Insira o endereço de destino">';
-    //                     echo '</section>';
-    //                     echo '<article class="submitContainer">';
-    //                         echo '<button type="submit">Enviar informações de compra <span class="material-symbols-outlined"> lock </span></button>';
-    //                     echo '</article>';
-    //                 echo '</form>';
-    //             echo '</div>';
-    //         echo '</div>';
-    //     }
-    // }
-    ?>
-    
     <main>
         <a href="index.php" class="backToThePage"><span class="material-symbols-outlined"> arrow_back </span></a>
         <?php

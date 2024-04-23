@@ -10,8 +10,8 @@ create table produto(
 );
 
 create table produto_in_pedido(
+	id_pedido int,
     id_produto int,
-    id_pedido int,
     qntPorUnidade INT,
     foreign key (id_produto) references pedidos(id_produto),
     foreign key (id_pedido) references produtos(id_pedido)
@@ -19,10 +19,10 @@ create table produto_in_pedido(
 
 create table pedido(
     id_pedido int primary key auto_increment,
-    cliente_id int,
-    preco_pedido decimal(10, 2),
+    id_usuario int,
+    preco_pedido DECIMAL(10, 2),
     data_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    foreign key (cliente_id) REFERENCES clientes(cliente_id)
+    foreign key (id_usuario) REFERENCES clientes(id_usuario)
 );
 
 create table usuario(
